@@ -23,6 +23,7 @@ namespace Catalog.API.Controllers
         public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
         {
             var products = await _repository.GetProducts();
+            _logger.LogError("test");
             return Ok(products);
         }
 
